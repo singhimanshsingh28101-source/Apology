@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f8e8ff, #fefefe, #f5f5dc);
+            color: #4a4a4a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            opacity: 0;
+            animation: gentleFadeIn 2.5s ease-in forwards;
+        }
+
+        @keyframes gentleFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .container::before {
+            content: "💖";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #6b5b95;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: #8a7d7d;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: gentleFadeInSection 2s ease-in forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.5s; }
+        .section:nth-child(2) { animation-delay: 1s; }
+        .section:nth-child(3) { animation-delay: 1.5s; }
+        .section:nth-child(4) { animation-delay: 2s; }
+        .section:nth-child(5) { animation-delay: 2.5s; }
+
+        @keyframes gentleFadeInSection {
+            to {
+                opacity: 1;
+            }
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0;
+            color: #5a5a5a;
+        }
+
+        button {
+            background-color: #d4a574;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #c49a6a;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        #message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #6b5b95;
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1em;
+            }
+            button {
+                padding: 12px 25px;
+                font-size: 1.2em;
+            }
+            .container::before {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h1>I'm Truly Sorry</h1>
+            <h2>From the heart, with respect.</h2>
+        </div>
+        <div class="section">
+            <p>Mujhse galti ho gayi.<br>
+            Instagram par zyada message kar diye aur zabardasti baat karne ki koshish ki.<br>
+            Mera intention kabhi bhi tumhe uncomfortable feel karane ka nahi tha.<br>
+            Phir bhi agar tumhe pareshani hui, toh uske liye dil se sorry.</p>
+        </div>
+        <div class="section">
+            <p>Tumhari feelings mere liye important hain.<br>
+            Aur tumhari space usse bhi zyada.<br>
+            Agar tum baat karna chaho, main hoon.<br>
+            Aur agar nahi, toh main us decision ko bhi respect karta hoon.</p>
+        </div>
+        <div class="section">
+            <p>Main seekh raha hoon aur sudharne ki koshish kar raha hoon.<br>
+            Aage se koi pressure nahi hoga.</p>
+        </div>
+        <div class="section">
+            <p>Bas itna hi kehna tha…</p>
+        </div>
+        <button onclick="showMessage()">🙂</button>
+        <div id="message">Thank you for reading. Take care.</div>
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
